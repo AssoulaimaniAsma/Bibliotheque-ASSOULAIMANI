@@ -1,13 +1,18 @@
 package com.assoulaimani.etudiant;
 
+import com.assoulaimani.etudiant.config.GlobalConfig;
+import com.assoulaimani.etudiant.config.TestParam;
 import com.assoulaimani.etudiant.entity.Etudiant7;
 import com.assoulaimani.etudiant.repositories.EtudiantRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableConfigurationProperties({GlobalConfig.class, TestParam.class})
+
 public class EtudiantApplication {
 
     public static void main(String[] args) {
